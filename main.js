@@ -19,9 +19,10 @@ const removeMaxNumberFromArray = (_numbers) => {
     //配列内の最大値とそのインデックス用の変数
     let maxNum;
     let maxIndex;
+    console.log('maxNum'+maxIndex);
     //最大値を探す
     copyNumbers.forEach((number, index) => {
-        if (maxNum == null || maxNum < number) {
+        if (maxNum === undefined|| maxNum < number) {
             maxNum = number;
             maxIndex = index;
         }
