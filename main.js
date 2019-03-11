@@ -19,7 +19,6 @@ const removeMaxNumberFromArray = (_numbers) => {
     //配列内の最大値とそのインデックス用の変数
     let maxNum;
     let maxIndex;
-    console.log('maxNum'+maxIndex);
     //最大値を探す
     copyNumbers.forEach((number, index) => {
         if (maxNum === undefined|| maxNum < number) {
@@ -56,7 +55,7 @@ console.log('returnedNumbersの内容は [10, 500, 234, 221] であるべき :',
  */
 const sortNumbers = (_numbers) => {
     //beforeSortNumbersをコピー
-    const copySortNumbers = beforeSortNumbers.slice();
+    const copySortNumbers = _numbers.slice();
     //小さい順にソート
     copySortNumbers.sort((a, b) => {
         if (a < b) {
@@ -70,7 +69,7 @@ const sortNumbers = (_numbers) => {
     return copySortNumbers;
 };
 
-beforeSortNumbers = [1000, 10, 500, 234, 965, 221, 102];
-afterSortNumbers = sortNumbers(beforeSortNumbers);
+const beforeSortNumbers = [1000, 10, 500, 234, 965, 221, 102];
+const afterSortNumbers = sortNumbers(beforeSortNumbers);
 console.log('beforeSortNumbersの内容は [1000, 10, 500, 234, 965, 221, 102] であるべき :', beforeSortNumbers);
 console.log('afterSortNumbersの内容は [10, 102, 221, 234, 500, 965, 1000] であるべき :', afterSortNumbers);
